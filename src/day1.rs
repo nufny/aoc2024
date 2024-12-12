@@ -35,7 +35,7 @@ pub mod p1 {
 
 pub mod p2 {
     pub fn run(input: String) -> u32 {
-        let (mut left, mut right): (Vec<u32>, Vec<u32>) = input
+        let (left, right): (Vec<u32>, Vec<u32>) = input
         .lines()
         .into_iter()
         .map(|e| {

@@ -16,8 +16,8 @@ struct Args {
  */
 
 fn main() {
-    let input = get_input(1);
-    let output = day1::p2::run(input);
+    let input = get_input(2);
+    let output = day2::p2::run(input);
     dbg!(output);
 
     // let args = Args::parse();
@@ -54,11 +54,11 @@ pub mod util {
     }
 }
 
-pub mod day1;
 
-//pub mod day2;
-
-//pub mod day3;
 
 #[cfg(test)]
 mod tests;
+
+pub mod day1;
+
+pub mod day2;
