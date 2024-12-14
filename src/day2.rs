@@ -76,8 +76,7 @@ pub mod p1 {
     use super::Report;
     pub fn run(input: String) -> u32 {
         let valid_reports = input
-        .split("\n")
-        .filter(|val| !val.is_empty())
+        .lines()
         .map(
             |report| 
             Report{
@@ -95,8 +94,7 @@ pub mod p2 {
     use super::Report;
     pub fn run(input: String) -> u32 {
         let valid_reports = input
-        .split("\n")
-        .filter(|val| !val.is_empty())
+        .lines()
         .map(
             |report| 
             Report{
