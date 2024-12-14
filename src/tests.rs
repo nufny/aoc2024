@@ -47,3 +47,14 @@ fn day3p1() {
 fn day3p2() {
     default_test(3,2,|input| day3::p2::run(input.to_string()).to_string());
 }
+
+use super::day4;
+// Day 4 tests
+#[test]
+fn day4p1() {
+    default_test(4,1,|input| day4::p1::run(input.to_string()).to_string());
+}
+#[test]
+fn day4p2() {
+    default_test(4,2,|input| day4::p2::run(input.to_string()).to_string());
+}

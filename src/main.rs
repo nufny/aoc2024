@@ -1,7 +1,7 @@
-// use clap::Parser;
+use clap::Parser;
 use util::get_input;
 
-/* 
+
 #[derive(Parser, Debug)]
 #[command()]
 struct Args {
@@ -13,19 +13,38 @@ struct Args {
     #[arg(short, long, default_value_t = 1)]
     part: u8,
 } 
- */
+
 
 fn main() {
-    let input = get_input(3);
-    let output = day3::p1::run(input);
+
+    let args = Args::parse();
+    let func = match args.day {
+        1 => match args.part {
+            1 => day1::p1::run,
+            2 => day1::p2::run,
+            _ => panic!()
+        },
+        2 => match args.part {
+            1 => day2::p1::run,
+            2 => day2::p2::run,
+            _ => panic!()
+        },
+        3 => match args.part {
+            1 => day3::p1::run,
+            2 => day3::p2::run,
+            _ => panic!()
+        },
+        4 => match args.part {
+            1 => day4::p1::run,
+            2 => day4::p2::run,
+            _ => panic!()
+        },
+        _ => panic!()
+    };
+    let input = get_input(args.day);
+    let output = func(input);
     dbg!(output);
 
-    // let args = Args::parse();
-    // let day_module = match args.day {
-    //     1 => day1,
-    //     _ => panic!()
-    // };
-    // let part_module = day_module::p{args.part};
 }
 
 
@@ -64,3 +83,5 @@ pub mod day1;
 pub mod day2;
 
 pub mod day3;
+
+pub mod day4;
