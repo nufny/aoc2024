@@ -16,8 +16,8 @@ struct Args {
  */
 
 fn main() {
-    let input = get_input(2);
-    let output = day2::p2::run(input);
+    let input = get_input(3);
+    let output = day3::p1::run(input);
     dbg!(output);
 
     // let args = Args::parse();
