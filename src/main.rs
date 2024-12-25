@@ -39,6 +39,18 @@ fn main() {
             2 => day4::p2::run,
             _ => panic!()
         },
+        5 => match args.part {
+            1 => day5::p1::run,
+            2 => day5::p2::run,
+            _ => panic!()
+        },
+        
+        // X => match args.part {
+        //     1 => dayX::p1::run,
+        //     2 => dayX::p2::run,
+        //     _ => panic!()
+        // }
+
         _ => panic!()
     };
     let input = get_input(args.day);
@@ -85,3 +97,5 @@ pub mod day2;
 pub mod day3;
 
 pub mod day4;
+
+pub mod day5;
