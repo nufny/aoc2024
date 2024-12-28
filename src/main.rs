@@ -44,6 +44,11 @@ fn main() {
             2 => day5::p2::run,
             _ => panic!()
         },
+        6 => match args.part {
+            1 => day6::p1::run,
+            2 => day6::p2::run,
+            _ => panic!()
+        },
         
         // X => match args.part {
         //     1 => dayX::p1::run,
@@ -99,3 +104,5 @@ pub mod day3;
 pub mod day4;
 
 pub mod day5;
+
+pub mod day6;
